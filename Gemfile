@@ -4,6 +4,7 @@ ruby "3.0.0"
 
 gem "bootsnap", ">= 1.4.4", require: false
 gem "devise"
+gem "faker"
 gem "jbuilder", "~> 2.7"
 gem "name_of_person"
 gem "pg", "~> 1.1"
