@@ -9,6 +9,6 @@ else
     password: "password",
     password_confirmation: "password"
   )
-  puts "Seeded Teacher table"
+  puts "Seeded User table"
 end
 
