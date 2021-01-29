@@ -8,6 +8,7 @@ gem "devise-bootstrapped", github: "king601/devise-bootstrapped", branch: "boots
 gem "faker"
 gem "faraday"
 gem "friendly_id", "~> 5.4.0"
+gem "image_processing"
 gem "jbuilder", "~> 2.7"
 gem "name_of_person"
 gem "pg", "~> 1.1"

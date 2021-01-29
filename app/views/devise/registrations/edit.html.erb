@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-    <h1 class="text-center">Account</h1>
+    <h1 class="text-center">Edit Account</h1>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render partial: 'devise/shared/error_messages', resource: resource %>
+
+      <div class="mb-3">
+        <%= f.text_field :name, autofocus: false, class: 'form-control', placeholder: "Name" %>
+      </div>
 
       <div class="mb-3">
         <%= f.email_field :email, class: 'form-control', placeholder: 'Email Address' %>
@@ -14,17 +18,30 @@
       <% end %>
 
       <div class="mb-3">
-        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password'  %>
-        <p class="form-text text-muted"><small>Leave password blank if you don't want to change it</small></p>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+        <p class="form-text text-muted text-center"><small>Leave password blank if you don't want to change it</small></p>
       </div>
 
       <div class="mb-3">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password'  %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
       </div>
 
       <div class="mb-3">
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: 'Current Password'  %>
-        <p class="form-text text-muted"><small>We need your current password to confirm your changes</small></p>
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: 'Current Password' %>
+        <p class="form-text text-muted text-center"><small>We need your current password to confirm your changes</small></p>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-sm-3">
+          <%= image_tag avatar_url_for(current_user, size: 80), class: "rounded-circle" %>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="form-group ">
+            <%= f.label "Edit your Avatar", class: "mb-2" %>
+            <%= f.file_field :avatar %>
+          </div>
+        </div>
       </div>
 
       <div class="mb-3 d-grid">
