@@ -21,7 +21,8 @@
       </ul>
       <ul class="navbar-nav justify-content-end">
         <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to "Profile", user_path(current_user.id), class: "nav-link", "aria-current": "page" %></li>
+          <li class="nav-item"><%= link_to current_user.name, root_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Profile", user_path(current_user.slug), class: "nav-link", "aria-current": "page" %></li>
           <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", "aria-current": "page" %></li>
         <% else %>
         <li class="nav-item"><%= link_to "Log in", new_user_session_path, class: "nav-link", "aria-current": "page" %></li>
