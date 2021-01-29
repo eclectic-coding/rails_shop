@@ -9,7 +9,8 @@ products.each do |product|
     price: product["price"],
     description: product["description"],
     category: product["category"],
-    image: product["image"]
+    image: product["image"],
+    stock: Faker::Alphanumeric.alphanumeric(number: 10)
   )
 end
 
