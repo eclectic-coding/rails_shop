@@ -4,10 +4,13 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    add_breadcrumb("Products", nil, true)
   end
 
   # GET /products/1 or /products/1.json
   def show
+    add_breadcrumb("Products", products_path, false)
+    add_breadcrumb(@product.title, nil, true)
   end
 
   # GET /products/new
