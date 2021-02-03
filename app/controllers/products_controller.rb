@@ -1,16 +1,16 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show edit update destroy ]
+  before_action :set_product, only: %i[show edit update destroy]
+  before_action :add_index_breadcrumb, only: %i[show new edit]
 
   # GET /products or /products.json
   def index
     @products = Product.all
-    add_breadcrumb("Products", nil, true)
+    add_breadcrumb("Products")
   end
 
   # GET /products/1 or /products/1.json
   def show
-    add_breadcrumb("Products", products_path, false)
-    add_breadcrumb(@product.title, nil, true)
+    add_breadcrumb(@product.title)
   end
 
   # GET /products/new
@@ -60,13 +60,18 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def product_params
-      params.require(:product).permit(:title, :price, :description, :category, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def product_params
+    params.require(:product).permit(:title, :price, :description, :category, :image)
+  end
+
+  def add_index_breadcrumb
+    add_breadcrumb("Products", products_path)
+  end
 end

@@ -2,11 +2,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_breadcrumbs
 
-  def add_breadcrumb(label, path, current = false)
+  def add_breadcrumb(label, path = nil)
     @breadcrumbs << {
       label: label,
-      path: path,
-      current: current
+      path: path
     }
   end
 

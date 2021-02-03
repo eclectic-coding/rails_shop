@@ -2,7 +2,7 @@
   <ol class="breadcrumb bg-light bg-gradient p-2">
     <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
     <% @breadcrumbs.each do |b| %>
-      <% if b[:current] %>
+      <% if b[:path].nil? %>
         <li class="breadcrumb-item active" aria-current="page">
           <%= b[:label] %>
         </li>
