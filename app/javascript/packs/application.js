@@ -11,9 +11,7 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
-import '../stylesheets/application.scss'
-
-import 'bootstrap/dist/js/bootstrap'
-import 'bootstrap/dist/css/bootstrap'
+import "bootstrap"
+import "data-confirm-modal"
 
 import "controllers"

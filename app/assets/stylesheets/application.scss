@@ -1,0 +1,17 @@
+$primary: #560badff;
+$success: #0f7173ff;
+$info: #a9fbd7ff;
+$warning: #ffd449ff;
+$danger: #d64933ff;
+$light: #f3f9d2ff;
+$dark: #191919ff;
+
+@import "bootstrap";
+
+// Fixes bootstrap nav-brand container overlap
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
