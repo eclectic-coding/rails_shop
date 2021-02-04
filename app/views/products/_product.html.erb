@@ -1,0 +1,18 @@
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="card-deck">
+    <div class="card my-4 shadow">
+      <div class="image">
+        <%= image_tag product.image, class: "card-img-top", alt: "Product Image" %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= product.title.truncate(50) %></h5>
+        <span class="badge badge-warning text-capitalize"><%= product.category %></span>
+        <p class="card-text"><%= product.description.truncate(150) %></p>
+        <div class="py-1 d-flex justify-content-between align-content-center">
+          <strong class="align-self-center"><%= number_to_currency(product.price) %></strong>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

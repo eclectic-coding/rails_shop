@@ -12,6 +12,5 @@ Rails.start()
 ActiveStorage.start()
 
 import "bootstrap"
-import "data-confirm-modal"
 
 import "controllers"
