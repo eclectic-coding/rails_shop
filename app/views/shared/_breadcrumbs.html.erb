@@ -1,14 +1,16 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb bg-light bg-gradient p-2">
-    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+  <ol class="breadcrumb bg-light p-2">
+    <li class="breadcrumb-item">
+      <%= link_to "Home", root_path, class: "text-decoration-none" %>
+    </li>
     <% @breadcrumbs.each do |b| %>
       <% if b[:path].nil? %>
-        <li class="breadcrumb-item active" aria-current="page">
+        <li class="breadcrumb-item" aria-current="page">
           <%= b[:label] %>
         </li>
       <% else %>
         <li class="breadcrumb-item">
-          <%= link_to b[:label], b[:path] %>
+          <%= link_to b[:label], b[:path], class: "text-decoration-none" %>
         </li>
       <% end %>
     <% end %>

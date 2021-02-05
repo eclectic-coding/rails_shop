@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.0.0"
 
 gem "bootsnap", ">= 1.4.4", require: false
-gem "bootstrap"
+gem "bootstrap", "~> 5.0.0.beta1"
 gem "devise"
 gem "devise-bootstrapped", github: "king601/devise-bootstrapped", branch: "bootstrap5"
 gem "faker"

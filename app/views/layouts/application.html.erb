@@ -13,14 +13,14 @@
 <body>
 <%= render "shared/navbar" %>
 <%= render "shared/notices" %>
-<main class="container">
+<div class="container" role="main">
   <div class="mt-5">
     <%= render "shared/breadcrumbs" %>
 
     <%= yield %>
 
   </div>
-</main>
+</div>
 
 </body>
 </html>

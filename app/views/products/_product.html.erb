@@ -1,12 +1,14 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
   <div class="card-deck">
     <div class="card my-4 shadow">
-      <div class="image">
-        <%= image_tag product.image, class: "card-img-top", alt: "Product Image" %>
-      </div>
+      <%= link_to product_path(product.id), "aria-label": "Read more about #{product.title}" do %>
+        <div class="image">
+          <%= image_tag product.image, class: "card-img-top", alt: "#{product.title} product Image" %>
+        </div>
+      <% end %>
       <div class="card-body">
-        <h5 class="card-title"><%= product.title.truncate(50) %></h5>
-        <span class="badge badge-warning text-capitalize"><%= product.category %></span>
+        <p class="card-title fs-5"><%= product.title.truncate(50) %></p>
+        <span class="badge rounded-pill bg-warning text-capitalize text-dark"><%= product.category %></span>
         <p class="card-text"><%= product.description.truncate(150) %></p>
         <div class="py-1 d-flex justify-content-between align-content-center">
           <strong class="align-self-center"><%= number_to_currency(product.price) %></strong>
