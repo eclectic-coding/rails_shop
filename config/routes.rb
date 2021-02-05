@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   resources :products
 
-  root to: 'static#home'
+  root to: 'products#index'
 
 end

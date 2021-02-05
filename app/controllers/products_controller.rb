@@ -6,8 +6,7 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @pagy, @products = pagy(Product.all)
-    add_breadcrumb("Products")
+    @pagy, @products = pagy(Product.all, items: 9)
   end
 
   # GET /products/1 or /products/1.json
