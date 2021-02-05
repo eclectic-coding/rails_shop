@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
+  include Pagy::Backend
+
   before_action :set_product, only: %i[show edit update destroy]
   before_action :add_index_breadcrumb, only: %i[show new edit]
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    @pagy, @products = pagy(Product.all)
     add_breadcrumb("Products")
   end
 
