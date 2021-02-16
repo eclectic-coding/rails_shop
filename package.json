@@ -3,12 +3,12 @@
   "private": true,
   "dependencies": {
     "@hotwired/turbo-rails": "^7.0.0-beta.5",
-    "@popperjs/core": "^2.6.0",
-    "@rails/actioncable": "^6.1.1",
+    "@popperjs/core": "^2.7.0",
+    "@rails/actioncable": "^6.1.2",
     "@rails/activestorage": "^6.1.1",
     "@rails/ujs": "^6.1.1",
     "@rails/webpacker": "5.2.1",
-    "bootstrap": "^5.0.0-beta1",
+    "bootstrap": "^5.0.0-beta2",
     "stimulus": "^2.0.0"
   },
   "version": "0.1.0",
