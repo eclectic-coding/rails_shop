@@ -10,7 +10,7 @@ module ApplicationHelper
     }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
 
-  def avatar_url_for(user, opts={})
+  def avatar_url_for(user, opts = {})
     size = opts[:size] || 32
 
     if user.avatar.attached?
