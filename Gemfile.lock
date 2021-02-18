@@ -83,6 +83,9 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    bullet (6.1.3)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     byebug (11.1.3)
     capybara (3.35.3)
       addressable
@@ -284,6 +287,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (0.2.3)
       rails (>= 6.0.0)
+    strong_migrations (0.7.6)
+      activerecord (>= 5)
     thor (1.1.0)
     tilt (2.0.10)
     turbo-rails (0.5.9)
@@ -294,6 +299,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
+    uniform_notifier (1.13.2)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.1.0)
@@ -324,6 +330,7 @@ DEPENDENCIES
   awesome_print
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.0.0.beta1)
+  bullet
   byebug
   capybara (>= 3.26)
   devise
@@ -353,6 +360,7 @@ DEPENDENCIES
   selenium-webdriver
   simplecov
   spring
+  strong_migrations
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
