@@ -1,5 +1,6 @@
-user_one:
+confirmed_user:
   first_name: John
   last_name: Doe
-  email: user_one@example.com
+  email: confirmed_user@example.com
+  confirmed_at: <%= Time.zone.now %>
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
