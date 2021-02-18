@@ -14,12 +14,13 @@ class UsersTest < ApplicationSystemTestCase
   test "should register" do
     visit new_user_registration_path
 
-    fill_in "Name", with: "Confirmed User"
-    fill_in "Email Address", with: "unique@example.com"
-    fill_in "Password", with: "password"
-    fill_in "Confirm Password", with: "password"
-
-    click_button "Sign up"
+    assert_difference("User.count", 0) do
+      fill_in "Name", with: "Confirmed User"
+      fill_in "Email Address", with: "unique@example.com"
+      fill_in "Password", with: "password"
+      fill_in "Confirm Password", with: "password"
+      click_button "Sign up"
+    end
 
   end
 

@@ -45,6 +45,7 @@ group :test do
   gem "guard-minitest"
   gem "minitest"
   gem "minitest-reporters"
+  gem "rails-controller-testing"
   gem "selenium-webdriver"
   gem "simplecov", require: false
   gem "webdrivers"
