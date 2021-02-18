@@ -19,6 +19,7 @@ gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.1"
 gem "rexml"
 gem "sass-rails", ">= 6"
+gem "strong_migrations"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 
@@ -28,6 +29,7 @@ end
 
 group :development do
   gem "awesome_print"
+  gem "bullet"
   gem "listen", "~> 3.3"
   gem "rack-mini-profiler", "~> 2.0"
   gem "rubocop"
