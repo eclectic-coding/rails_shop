@@ -2,7 +2,7 @@
   "name": "rails-shop",
   "private": true,
   "dependencies": {
-    "@hotwired/turbo-rails": "^7.0.0-rc.4",
+    "@hotwired/turbo-rails": "^7.0.0-rc.5",
     "@popperjs/core": "^2.10.1",
     "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
